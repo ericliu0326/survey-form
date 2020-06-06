@@ -7,30 +7,30 @@
     
     <div class="container">
         <div>
-                <strong><h1 id="title" class="text-center">Twitter Survey Form</h1></strong>
-                <p id="description">Thank you for taking the time to provide feedback. Your input helps us improve Twitter!</p>
+            <strong><h1 id="title" class="text-center">Twitter Survey Form</h1></strong>
+            <p id="description">Thank you for taking the time to provide feedback. Your input helps us improve Twitter!</p>
             </header>
         </div>
     </div>
-    <form>
+    <form id="survey-form">
         <div class="form-control">
-            <label for="name" id="label-name">Name</label>
-            <input type="text" id="name" placeholder="Enter your full name"/>
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required/>
         </div>
 
         <div class="form-control">
-            <label for="email" id="label-email">Email</label>
-            <input type="text" id="name" placeholder="Enter your email address"/>
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" placeholder="Enter your email address" required/>
         </div>
 
         <div class="form-control">
-            <label for="age" id="label-age">Age</label>
-            <input type="number" id="age" placeholder="Enter your age"/>
+            <label for="number" id="number-label">Age</label>
+            <input type="number" id="number" placeholder="Enter your age" required min="0" max="200" />
         </div>
 
         <div class="form-control">
-            <label for="usage" id="label-usage">How often do you use Twiter?</label>
-            <select id="usage" placeholder="Select an option"/>
+            <label for="usage" id="usage-label">How often do you use Twiter?</label>
+            <select id="dropdown" placeholder="Select an option"/>
                 <option disabled selected value>Select an option</option>
                 <option value="strong-daily">multiple times a day</option>
                 <option value="daily">a few times per day</option>
@@ -42,16 +42,25 @@
         </div>
 
         <div class="form-control">
-             <label>What are your top motivation(s) for using Twitter?<small> (check all that apply)</small></label>
-             <div class="checkboxes-text">
-                <label for="motivation-2"><input type="checkbox" id="motivation-2"/>Entertainment</label>
-                <label for="motivation-3"><input type="checkbox" id="motivation-3"/>Self-expression</label>
-                <label for="motivation-4"><input type="checkbox" id="motivation-4"/>Personal Networking</label>
-                <label for="motivation-1"><input type="checkbox" id="motivation-1"/>News and information</label>
-                <label for="motivation-5"><input type="checkbox" id="motivation-5"/>Professional Networking</label>
-                <label for="motivation-6"><input type="checkbox" id="motivation-6"/>Politics</label>
-                <label for="motivation-7"><input type="checkbox" id="motivation-7"/>Other</label>           
+             <label id="motivation-label">What are your top motivation(s) for using Twitter?<small> (check all that apply)</small></label>
+             <div class="click-text">
+                <label for="motivation-1"><input type="checkbox" value="1" id="motivation-1"/>News and information</label>
+                <label for="motivation-2"><input type="checkbox" value="2" id="motivation-2"/>Entertainment</label>
+                <label for="motivation-3"><input type="checkbox" value="3" id="motivation-3"/>Self-expression</label>
+                <label for="motivation-4"><input type="checkbox" value="4" id="motivation-4"/>Personal networking</label>
+                <label for="motivation-5"><input type="checkbox" value="5" id="motivation-5"/>Professional networking</label>
+                <label for="motivation-6"><input type="checkbox" value="6" id="motivation-6"/>Politics</label>
+                <label for="motivation-7"><input type="checkbox" value="7" id="motivation-7"/>Other</label>           
              </div>
+        </div>
+
+        <div class="form-control">
+            <label>Would you recommend Twitter to a friend?</label>
+            <div class="click-text">   
+            <label for="recommend-1"><input type="radio" id="recommend-1" name="recommend" value="definitely"/>Definitely</label>
+            <label for="recommend-2"><input type="radio" id="recommend-2" name="recommend" value="maybe"/>Maybe</label>
+            <label for="recommend-3"><input type="radio" id="recommend-3" name="recommend" value="no"/>No</label>
+            <label for="recommend-4"><input type="radio" id="recommend-4" name="recommend" value="not-sure"/>Not sure</label>
         </div>
 
         <div class="form-control">
@@ -59,16 +68,16 @@
             <textarea name="comments" id="comments" placeholder="Enter your comments here"></textarea>
         </div>
         
-        <button type="submit" value="Submit">Submit</button>
+        <button type="submit" value="Submit" id="submit">Submit</button>
     </form>
-    
+</div>          
+
     <svg width="0" height="0" aria-hidden="true">
         <symbol id="svg--twitter" viewbox="0 -7 15 30">
             <path d="M15.36 3.434c-0.542 0.241-1.124 0.402-1.735 0.476 0.624-0.374 1.103-0.966 1.328-1.67-0.583 0.346-1.23 0.598-1.917 0.733-0.551-0.587-1.336-0.954-2.205-0.954-1.668 0-3.020 1.352-3.020 3.019 0 0.237 0.026 0.467 0.078 0.688-2.51-0.126-4.735-1.328-6.224-3.155-0.261 0.446-0.41 0.965-0.41 1.518 0 1.048 0.534 1.972 1.344 2.514-0.495-0.016-0.961-0.151-1.368-0.378 0 0.013 0 0.025 0 0.038 0 1.463 1.042 2.683 2.422 2.962-0.253 0.069-0.52 0.106-0.796 0.106-0.194 0-0.383-0.018-0.568-0.054 0.384 1.2 1.5 2.073 2.821 2.097-1.034 0.81-2.335 1.293-3.75 1.293-0.244 0-0.484-0.014-0.72-0.042 1.336 0.857 2.923 1.357 4.63 1.357 5.554 0 8.592-4.602 8.592-8.593 0-0.13-0.002-0.261-0.009-0.39 0.59-0.426 1.102-0.958 1.507-1.563z"
             />
         </symbol>
     </svg>
-          
     <a href="https://twitter.com/">
         <svg class="svg--icon">
         <use xlink:href="#svg--twitter" />

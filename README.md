@@ -1,7 +1,7 @@
 Sample Twitter survey form. Project is part of the freeCodeCamp Responsive Web Design course.
 
 To see working version of the survey form, please see the link below:
-https://ericliu0326.github.io/survey-form/
+https://liuperic.github.io/survey-form/
 
 
 FCC provided user stories that need to be fulfilled before completion/success of project.
